@@ -30,12 +30,35 @@ public Vertex(double x, double y){
 
 
 public void skalarMultMod(double s){
-  x=x*s;
+  x=x*s; 
   y=y*s;
 }
+
+public Vertex add(Vertex v2){
+  return new Vertex(x + v2.x, y + v2.y)
+}
+
+public Void addMod(Vertex v2){
+  x+=v2.x; //x=x+v2.x;  (langform)
+  y+=v2.y;
+}
+
+public void setX(double x){this.x = x;}
+public void setY(double y){this.y = y;}
+public double getX(){return x;}
+public double getY(){return y;}
 
  public String toString(){
     return "("+x+","+y+")";
 
  }
+
+public boolean equals(Object thatObject){
+  if(thatObject instanceof Vertex){
+    that Vertex = (Vertex) thatObject;
+    return this.x == thatObject.x && this.y = thatObject.y;
+  }
+  return false;
+}
+
 }
