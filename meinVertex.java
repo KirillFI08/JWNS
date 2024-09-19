@@ -11,9 +11,13 @@ class Vertex {
         Vertex v1 = new Vertex(10, 17);
         Vertex v2 = new Vertex(10, 16); 
         Vertex v3 = v1.skalarMult(2);
-        double v4 = v2.distance(v3);
-
-        System.out.println(v4);
+        System.out.println(v1);
+        System.out.println(v1);
+        System.out.println(v1.length());
+        System.out.println(v2.length());
+        System.out.println(v3);
+        System.out.println(v1.equals(v3));
+        System.out.println(v1.equals(v1));
     }
   
     public double length() {
@@ -65,4 +69,11 @@ class Vertex {
         }
         return false;
     }
+
+    public void normalize() {
+        double factor = this.length();
+        x = x / factor;
+        y = y / factor;
+    
   }
+
