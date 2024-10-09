@@ -7,11 +7,11 @@ public class SimpleOval extends GeometricObject {
 
     }
     
-    public SimpleOval(double x, double y, double width, double height, Color color){
-        this(new Vertex(x,y), width, height, new Color(0,0,0) );
+    public SimpleOval(double x, double y, double width, double height){
+        this(new Vertex(x,y), width, height, new Color(0,0,0));
     }
 
-    public String toString() {
+    @Override public String toString() {
         return "SimpleOval: " + super.toString();
 
     }
