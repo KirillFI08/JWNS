@@ -1,20 +1,26 @@
-public class SimpleTriangle extends GeometricObject {
-    private Vertex v1; // Erste Ecke (linke Ecke)
-    private Vertex v2; // Zweite Ecke (rechte Ecke)
-    private Vertex v3; // Dritte Ecke (Scheitelpunkt)
+import java.awt.Color;
 
-    public SimpleTriangle(Vertex pos, double width) {
-        v1 = pos; // Linke Ecke
-        v2 = new Vertex(pos.x + width, pos.y); // Rechte Ecke
-        double height = (Math.sqrt(3) / 2) * width; // Höhe eines gleichseitigen Dreiecks
-        v3 = new Vertex(pos.x + width / 2, pos.y + height); // Scheitelpunkt
+public class SimpleTriangle extends GeometricObject {
+
+    public SimpleTriangle(Vertex pos, double width, Color color) {
+        super(pos, width, Math.sqrt(3) / 2 * width, color);
     }
 
     public SimpleTriangle(double x, double y, double width) {
-        this(new Vertex(x, y), width);
+        super(new Vertex(x, y), width);
     }
 
-    public String toString() {
-        return "SimpleTriangle: (" + v1 + ", " + v2 + ", " + v3 + ")";
+    @Override
+    public double area() {
+        return width * height / 2;
+    }
+
+    @Override
+    public double circumference(){
+        return 3*width;
+    }
+    @Override
+    public String toString(){
+        return "SimpleTriangle: "+super.toString();
     }
 }
