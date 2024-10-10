@@ -1,20 +1,25 @@
-import java.awt.Graphics;
-import javax.swing.JPanel;;
+import JWNS.src.util.ShowInFrame;
+import javax.swing.JPanel;
 
-public class paintableImage extends JPanel implements Paintable {
+public class PaintableImage extends JPanel implements Paintable {
+
     MyImage mi;
 
-    public paintableImage(MyImage mi){this.mi=mi;}
-    public paintableImage(String name){this.mi = new MyImage(name);}
-
-
-    @Override
-    public void paintTo(Graphics g){
-        g.drawImage(mi.get(),0,0,this);
+    public PaintableImage(MyImage mi) {
+        this.mi = mi;
     }
 
-    public static void main(String[] args){
-        paintableImage pi = new paintableImage("test.png");
-        System.out.println(pi.mi.get().getHeight(pi));
+    public PaintableImage(String name) {
+        this.mi = new MyImage(name);
     }
+
+    public void paintTo(java.awt.Graphics g) {
+        g.drawImage(mi.get(), 0, 0, this);
+    }
+
+    public static void main(String[] args) {
+        PaintableImage pi = new PaintableImage("test.jpg");
+        ShowInFrame.show(new PaintablePanel(pi));
+    }
+
 }
