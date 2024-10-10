@@ -1,8 +1,7 @@
-import JWNS.src.util.ShowInFrame;
 import javax.swing.JPanel;
 
 public class PaintableImage extends JPanel implements Paintable {
-
+    
     MyImage mi;
 
     public PaintableImage(MyImage mi) {

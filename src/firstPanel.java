@@ -1,16 +1,21 @@
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-public class firstPanel extends JPanel {
 
-    public void paintComponent(java.awt.Graphics g){
-        g.fillRect(50,50,10,10);
+
+public class FirstPanel extends JPanel {
+    private static String title = "Test";
+    @Override
+    
+    public void paintComponent(java.awt.Graphics g) {
+        g.fillRect(100,100, 200, 200);
+        g.fillRoundRect(400, 100, 100, 50, 10, 10); 
     }
 
     public static void main(String[] args){
-        JFrame f = new JFrame();
-        f.add(new firstPanel());
-        f.setVisible(true);
-    }
-    
+            JFrame f = new JFrame(title);
+            f.add(new FirstPanel());
+           // f.pack();
+            f.setVisible(true);
+        }
 }

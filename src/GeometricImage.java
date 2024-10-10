@@ -54,7 +54,3 @@ public class GeometricImage extends GeometricObject implements Paintable, ImageO
         ShowInFrame.show(new PaintablePanel(pi));
     }
 }
-}
-
-
-import util.ShowInFrame;
