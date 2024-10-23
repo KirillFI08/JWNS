@@ -53,4 +53,8 @@ public class GeometricImage extends GeometricObject implements Paintable, ImageO
         System.out.println("Breite: " + pi.mi.get().getWidth(pi) + " Höhe: " + pi.mi.get().getHeight(pi));
         ShowInFrame.show(new PaintablePanel(pi));
     }
+
+    public double getWidth(){
+        return super.getWidth();
+    }
 }

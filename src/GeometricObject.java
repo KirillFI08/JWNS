@@ -81,6 +81,10 @@ public class GeometricObject {
         moveTo(pos.add(v));
     }
 
+    
+
+
+
     public boolean equals(GeometricObject thatObject) {
         if (thatObject instanceof GeometricObject) {
             GeometricObject that = (GeometricObject) thatObject;
