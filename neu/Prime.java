@@ -5,7 +5,7 @@ class Prime {
 
     public static void main(String[] args) {
 
-        System.out.println(output(generatePrimes(1000)));
+        System.out.println(output(generatePrimes(10000)));
     }
 
     public static boolean isPrime(int candidate) {
