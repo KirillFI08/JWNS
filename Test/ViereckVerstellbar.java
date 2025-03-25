@@ -1,18 +1,8 @@
 package Test;
-public class Diamant {
+public class ViereckVerstellbar {
 
     public static void main(String[] args){
-        
-        int c = 11;
-
-        int d = 0;
-
-
-        dAuf(d, c);
-        dMi(c);
-        dAb(c,d);
-
-
+      
     }
 
 
