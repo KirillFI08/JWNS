@@ -1,4 +1,4 @@
-package d;
+package e;
 
 
 // Ein Listenknoten speichert Daten vom Typ T und einen Verweis auf den nächsten Knoten

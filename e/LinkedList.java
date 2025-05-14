@@ -1,4 +1,4 @@
-package d;
+package e;
 
 // Die LinkedList speichert eine Reihe von Listenknoten und bietet Operationen wie Anfügen und Entfernen
 public class LinkedList<T> {
@@ -49,16 +49,5 @@ public class LinkedList<T> {
                 aktuell.nachfolger = aktuell.nachfolger.nachfolger; // Den Knoten nach dem zu entfernenden Knoten überspringen
             }
         }
-    }
-
-    public boolean finde(T x) {
-        ListenElement<T> aktuell = anfang;
-        while (aktuell != null) {
-            if (aktuell.daten.equals(x)) {
-                return true; // Element gefunden
-            }
-            aktuell = aktuell.nachfolger; // Zum nächsten Knoten weitergehen
-        }
-        return false; // Element nicht gefunden
     }
 }

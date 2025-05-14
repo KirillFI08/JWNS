@@ -1,34 +1,33 @@
 package d;
 
+// Die QueueWithList verwendet eine LinkedList zur Implementierung einer Warteschlange
 public class QueueWithList<T> {
-    private LinkedList<T> dieListe;
+    private LinkedList<T> liste = new LinkedList<>(); // Instanz der LinkedList
+    private ListenElement<T> anfang;
 
-    public QueueWithList() {
-        dieListe = new LinkedList<>();
-    }
-
+    // Gibt zurück, ob die Queue leer ist, indem die istLeer-Methode der LinkedList aufgerufen wird
     public boolean isEmpty() {
-        return dieListe.istLeer();
+        return liste.istLeer();
     }
 
+    // Fügt ein Element am Ende der Queue hinzu (Verwendet die anhaengen-Methode der LinkedList)
     public void enqueue(T x) {
-        dieListe.anhaengen(x);
+        liste.anhaengen(x);
     }
 
+    // Entfernt das erste Element der Queue und gibt es zurück
     public T dequeue() {
-        if (isEmpty()) {
-            throw new RuntimeException("Queue ist leer");
-        }
-        T wert = dieListe.get(0);
-        dieListe.entferneBei(0);
-        return wert;
+        T x = liste.get(0); // Das erste Element holen
+        liste.entferneBei(0); // Das erste Element entfernen
+        return x; // Das entfernte Element zurückgeben
     }
 
+    // Gibt das erste Element der Queue zurück, ohne es zu entfernen
     public T front() {
-        if (isEmpty()) {
-            throw new RuntimeException("Queue ist leer");
-        }
-        return dieListe.get(0);
+        return liste.get(0); // Holt das erste Element der Liste
     }
+
+    
 }
+
 
