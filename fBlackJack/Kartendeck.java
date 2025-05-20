@@ -22,4 +22,11 @@ public class Kartendeck {
     private static String kartenListe(int j, int i) {
         return Karten.farben(j) + " " + Karten.werte[i];
     }
+
+    private static Stack kartendeck(List<String> kartenListe, Stack<Karten> a){
+        
+
+        return a; 
+        
+    }
 }
