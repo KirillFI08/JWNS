@@ -3,30 +3,25 @@ package fBlackJack;
 import java.util.*;
 
 public class Kartendeck {
-    private Stack<Karten> karten;
-    private static int anzahlKarten = 52-1;
-    private static List<String> meineListe = new ArrayList<>();
+    private static final int ANZAHL_KARTEN_PRO_FARBE = 13;
+    private static final int ANZAHL_FARBEN = 4;
 
-    Random zufall = new Random();
-    int zufallsIndex = zufall.nextInt(52);
+    // Methode zum Erzeugen und Mischen eines neuen Kartendecks
+    public static Stack<Karten> neuesGemischtesDeck() {
+        List<Karten> kartenListe = new ArrayList<>();
 
-    public static void main(String[] args) {
-        for (int j = 0; j < 4; j++) {
-            for (int i = 0; i < anzahlKarten / 4; i++) {
-                meineListe.add(kartenListe(j, i));
-
+        for (int farbe = 0; farbe < ANZAHL_FARBEN; farbe++) {
+            for (int wert = 0; wert < ANZAHL_KARTEN_PRO_FARBE; wert++) {
+                kartenListe.add(new Karten(Karten.farben(farbe), Karten.werte[wert]));
             }
         }
-    }
 
-    private static String kartenListe(int j, int i) {
-        return Karten.farben(j) + " " + Karten.werte[i];
-    }
+        Collections.shuffle(kartenListe);
 
-    private static Stack kartendeck(List<String> kartenListe, Stack<Karten> a){
-        
+        Stack<Karten> kartenDeck = new Stack<>();
+        kartenDeck.addAll(kartenListe);
 
-        return a; 
-        
+        return kartenDeck;
     }
 }
+
