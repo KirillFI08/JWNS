@@ -6,7 +6,6 @@ public class Kartendeck {
     private static final int ANZAHL_KARTEN_PRO_FARBE = 13;
     private static final int ANZAHL_FARBEN = 4;
 
-    // Methode zum Erzeugen und Mischen eines neuen Kartendecks
     public static Stack<Karten> neuesGemischtesDeck() {
         List<Karten> kartenListe = new ArrayList<>();
 

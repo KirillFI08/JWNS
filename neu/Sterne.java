@@ -1,4 +1,4 @@
-package neu;
+
 public class Sterne {
     public static void main(String[] args) {
         int c = 3;

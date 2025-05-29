@@ -1,6 +1,6 @@
 public class Fakultaet {
     public static void main(String[] args){
-        int a = 3;
+        int a = 5;
         System.out.println("Zahl: "+a);
         System.out.println("Lösung: "+fakultät(a));
     }
