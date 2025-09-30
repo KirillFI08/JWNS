@@ -11,7 +11,7 @@ tierListe.add("Schwein");
 tierListe.add("Huhn");
 // 3. Tierliste ausgeben
 System.out.println("Tierliste:");
-for (String tier : ) {
+for (String tier : tierListe) {
 System.out.println("- " + tier);
 }
 // 4. Tiere in den Stack legen
@@ -19,14 +19,14 @@ beobachtungskamera.push("Huhn");
 beobachtungskamera.push("Kuh");
 beobachtungskamera.push("Schwein");
 // 5. Oberstes Tier vom Stack entfernen
-String zuletztGesehen = beobachtungskamera.();
+String zuletztGesehen = beobachtungskamera.pop();
 System.out.println("\nZuletzt gesehenes Tier (Stack): " + zuletztGesehen);
 // 6. Tiere zur Queue hinzufügen
 futterausgabe.add("Schwein");
 futterausgabe.add("Huhn");
 futterausgabe.add("Kuh");
 // 7. Vorderstes Tier aus der Queue entfernen
-String zuerstGefüttert = futterausgabe.______();
+String zuerstGefüttert = futterausgabe.poll();
 System.out.println("Zuerst gefüttertes Tier (Queue): " + zuerstGefüttert);
 }
 }
