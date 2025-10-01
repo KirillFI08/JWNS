@@ -1,4 +1,4 @@
-public class hindernis {
+public class Hindernis {
 
     public Knoten verarbeite(){
         if(get.zufallszahl()<p){
