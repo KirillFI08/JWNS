@@ -1,16 +1,49 @@
 package h;
 
-public class Test {
-    Fahrzeug[] fahrzeuge = new Fahrzeug[3];
+import java.util.ArrayList;
 
-    public static void main(String[] args){
-    Test test = new Test();
-    test.fahrzeuge[0] = new Auto("BMW", 67);
-    test.fahrzeuge[1] = new Fahrrad("I", 1);
-    test.fahrzeuge[2] = new Auto("Audi", 160);
+public class Test {
+    public static void main(String[] args) {
+
+        ArrayList<Fahrzeug> alleFahrzeuge = new ArrayList<>();
+
+        alleFahrzeuge.add(new Auto("BMW", 45));
+        alleFahrzeuge.add(new Fahrrad("Mountain Bike", 13));
+        alleFahrzeuge.add(new Zug("ICE", 211));
+
+        System.out.println(alleFahrzeuge);
+        System.out.println(durchschnitt(alleFahrzeuge));
+
+        
     }
 
-    for(int i=0; i<fahrzeuge.length; i++){
-        fahrzeuge[i].info();
+    public static String durchschnitt(ArrayList<Fahrzeug> alleFahrzeuge){
+        int summe = 0;
+
+        for (int i = 0; i < alleFahrzeuge.size(); i++) {
+            Fahrzeug f = alleFahrzeuge.get(i);
+            summe = summe + f.getGeschwindigkeit();
+        }
+
+        double durchschnitt = 0;
+        if (alleFahrzeuge.size() > 0) {
+            durchschnitt = (double) summe / alleFahrzeuge.size();
+        }
+
+        return "Durchschnittsgeschwindigkeit: "+durchschnitt+" km/h";
+
+    }
+
+    public static void langsamster(ArrayList<Fahrzeug> alleFahrzeuge){
+        Fahrzeug f = alleFahrzeuge.get(1);
+        for (int i = 2; i < alleFahrzeuge.size(); i++) {
+            
+            if (alleFahrzeuge.get(i).getGeschwindigkeit() < f.getGeschwindigkeit()) {
+            f = alleFahrzeuge.get(i);
+        }
+        }
+
+        System.out.println(f+" Ist das langsamste Fahrzeug");
+
     }
 }

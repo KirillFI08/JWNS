@@ -1,4 +1,4 @@
-package fBlackJack;
+package BlackJack;
 
 public class Karten {
     private String farbe;

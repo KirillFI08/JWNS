@@ -1,4 +1,4 @@
-package fBlackJack;
+package BlackJack;
 
 import java.util.*;
 
