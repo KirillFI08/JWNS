@@ -11,9 +11,7 @@ public class Test {
         alleFahrzeuge.add(new Fahrrad("Mountain Bike", 13));
         alleFahrzeuge.add(new Zug("ICE", 211));
 
-        System.out.println(alleFahrzeuge);
-        System.out.println(durchschnitt(alleFahrzeuge));
-
+        
         
     }
 
