@@ -1,7 +1,7 @@
 
 public class Sterne {
     public static void main(String[] args) {
-        int c = 3;
+        int c = 9;
         sAb(c);
 
     }

@@ -2,7 +2,7 @@ import java.util.Random;
 public class Weihnachtsbaum {
     public static void main(String[] args) {
         Random random = new Random();
-        int länge = 29;
+        int länge = 100;
 
         for (int l = 1; l<=länge; l++){
                 int abstand = länge - l;

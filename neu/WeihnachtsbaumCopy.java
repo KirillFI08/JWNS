@@ -3,7 +3,7 @@ import java.util.Random;
 public class WeihnachtsbaumCopy {
     public static void main(String[] args) {
         Random random = new Random();
-        int länge = 15;
+        int länge = 30;
 
         // ANSI Escape Codes für Farben
         String grün = "\u001B[32m";   // Grün für den Baum
