@@ -1,8 +1,8 @@
-class Vertex {
+class iVertex {
     public double x;
     public double y;
   
-    public Vertex(double x, double y) {
+    public iVertex(double x, double y) {
         this.x = x;
         this.y = y;
     }
@@ -24,8 +24,8 @@ class Vertex {
         return Math.sqrt(x * x + y * y);
     }
   
-    public Vertex skalarMult(double s) {
-        return new Vertex(x * s, y * s);
+    public iVertex skalarMult(double s) {
+        return new iVertex(x * s, y * s);
     }
   
     public void skalarMultMod(double s) {
@@ -33,8 +33,8 @@ class Vertex {
         y = y * s;
     }
   
-    public Vertex add(Vertex that) {
-        return new Vertex(x + that.x, y + that.y);
+    public iVertex add(iVertex v) {
+        return new iVertex(x + v.x, y + v.y);
     }
   
     public Vertex sub(Vertex that) {
@@ -76,5 +76,10 @@ class Vertex {
         y = y / factor;
     
   }
+
+    public iVertex add(iVertex v) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'add'");
+    }
 }
 

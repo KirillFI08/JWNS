@@ -46,3 +46,4 @@ public class Suche {
     }
     System.out.println(Arrays.toString(array));
 }
+}

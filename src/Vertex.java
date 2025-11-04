@@ -9,9 +9,9 @@ class Vertex {
   }
 
   public static void main(String[] args) {
-    Vertex v1 = new Vertex(42, 17);
-    Vertex v2 = new Vertex(0.3, 24.6);
-    Vertex v3 = v1.skalarMult(2);
+    iVertex v1 = new iVertex(42, 17);
+    iVertex v2 = new iVertex(0.3, 24.6);
+    iVertex v3 = v1.skalarMult(2);
 
     System.out.println(v1);
     System.out.println(v3);
@@ -26,8 +26,8 @@ class Vertex {
     return Math.sqrt(x * x + y * y);
   }
 
-  public Vertex skalarMult(double s) {
-    return new Vertex(x * s, y * s);
+  public iVertex skalarMult(double s) {
+    return new iVertex(x * s, y * s);
   }
 
   public void skalarMultMod(double s) {
@@ -35,21 +35,21 @@ class Vertex {
     y = y * s;
   }
 
-  public Vertex add(Vertex that) {
-    return new Vertex(x + that.x, y + that.y);
+  public iVertex add(iVertex that) {
+    return new iVertex(x + that.x, y + that.y);
   }
 
-  public Vertex sub(Vertex that){
-    return new Vertex(x - that.x, y - that.y);
+  public iVertex sub(iVertex that){
+    return new iVertex(x - that.x, y - that.y);
   }
 
-  public double distance(Vertex that){
+  public double distance(iVertex that){
     double x_diff = that.x-this.x;
     double y_diff = that.y-this.y;
     return Math.sqrt(x_diff * x_diff + y_diff * y_diff);
   }
 
-  public void addMod(Vertex that) {
+  public void addMod(iVertex that) {
     x += that.x;
     y += that.y;
 
@@ -79,8 +79,8 @@ class Vertex {
   }
 
   public boolean equals(Object thatObject) {
-    if (thatObject instanceof Vertex) {
-      Vertex that = (Vertex) thatObject;
+    if (thatObject instanceof iVertex) {
+      iVertex that = (iVertex) thatObject;
 
       return this.x == that.x && this.y == that.y;
     }

@@ -11,7 +11,7 @@ public class GeometricImage extends GeometricObject implements Paintable, ImageO
     private String fileName;
 
     public GeometricImage(String fileName, double x, double y) {
-        super(new Vertex(x, y));
+        super(new iVertex(x, y));
         this.fileName = fileName;
         init();
     }

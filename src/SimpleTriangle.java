@@ -2,12 +2,12 @@ import java.awt.Color;
 
 public class SimpleTriangle extends GeometricObject {
 
-    public SimpleTriangle(Vertex pos, double width, Color color) {
+    public SimpleTriangle(iVertex pos, double width, Color color) {
         super(pos, width, Math.sqrt(3) / 2 * width, color);
     }
 
     public SimpleTriangle(double x, double y, double width) {
-        super(new Vertex(x, y), width);
+        super(new iVertex(x, y), width);
     }
 
     @Override

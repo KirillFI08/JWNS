@@ -1,14 +1,14 @@
 import javax.swing.JPanel;
 
-public class PaintableImage extends JPanel implements Paintable {
+public class paintableImage extends JPanel implements Paintable {
     
     MyImage mi;
 
-    public PaintableImage(MyImage mi) {
+    public paintableImage(MyImage mi) {
         this.mi = mi;
     }
 
-    public PaintableImage(String name) {
+    public paintableImage(String name) {
         this.mi = new MyImage(name);
     }
 
@@ -17,7 +17,7 @@ public class PaintableImage extends JPanel implements Paintable {
     }
 
     public static void main(String[] args) {
-        PaintableImage pi = new PaintableImage("test.jpg");
+        paintableImage pi = new paintableImage("test.jpg");
         ShowInFrame.show(new PaintablePanel(pi));
     }
 

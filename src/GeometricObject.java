@@ -2,12 +2,12 @@ import java.awt.Color;
 
 public class GeometricObject {
 
-    public Vertex pos;
+    public iVertex pos;
     public double width;
     public double height;
     public Color color;
 
-    public GeometricObject(Vertex pos, double width, double height, Color color) {
+    public GeometricObject(iVertex pos, double width, double height, Color color) {
         this.pos = pos;
         this.color = color;
 
@@ -27,11 +27,11 @@ public class GeometricObject {
     }
 
     public GeometricObject(double posx, double posy, double width, double height) {
-        this(new Vertex(posx, posy), width, height, new Color(0, 0, 0));
+        this(new iVertex(posx, posy), width, height, new Color(0, 0, 0));
 
     }
 
-    public GeometricObject(Vertex pos, double width) {
+    public GeometricObject(iVertex pos, double width) {
         this(pos, width, width, new Color(0, 0, 0));
     }
 
@@ -39,7 +39,7 @@ public class GeometricObject {
         this(0, 0, width, height);
     }
 
-    public GeometricObject(Vertex pos) {
+    public GeometricObject(iVertex pos) {
         this(pos, 0, 0, new Color(0, 0, 0));
     }
 
@@ -60,7 +60,7 @@ public class GeometricObject {
         return height * width;
     }
 
-    public boolean contains(Vertex v) {
+    public boolean contains(iVertex v) {
         return v.x >= pos.x && v.x <= pos.x + width && v.y >= pos.y && v.y <= pos.y + height;
         // ist x im GeometricObject?
     }
@@ -69,21 +69,17 @@ public class GeometricObject {
         return this.area() > that.area();
     }
 
-    public void moveTo(Vertex v) {
+    public void moveTo(iVertex v) {
         pos = v;
     }
 
     public void moveTo(double x, double y) {
-        moveTo(new Vertex(x, y));
+        moveTo(new iVertex(x, y));
     }
 
-    public void move(Vertex v) {
+    public void move(iVertex v) {
         moveTo(pos.add(v));
     }
-
-    
-
-
 
     public boolean equals(GeometricObject thatObject) {
         if (thatObject instanceof GeometricObject) {
@@ -97,6 +93,11 @@ public class GeometricObject {
 
     public String toString() {
         return "pos: " + pos + " w: " + width + " h: " + height;
+    }
+
+    public double getWidth() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getWidth'");
     }
 
 }

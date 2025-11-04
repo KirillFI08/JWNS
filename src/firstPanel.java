@@ -3,7 +3,7 @@ import javax.swing.JPanel;
 
 
 
-public class FirstPanel extends JPanel {
+public class firstPanel extends JPanel {
     private static String title = "Test";
     @Override
     
@@ -14,7 +14,7 @@ public class FirstPanel extends JPanel {
 
     public static void main(String[] args){
             JFrame f = new JFrame(title);
-            f.add(new FirstPanel());
+            f.add(new firstPanel());
            // f.pack();
             f.setVisible(true);
         }

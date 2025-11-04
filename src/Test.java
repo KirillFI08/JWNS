@@ -1,9 +1,9 @@
 public class Test {
   public static void main(String[] args) {
-    Vertex v1 = new Vertex(42, 17);
-    Vertex v2 = new Vertex(0.3, 24.6);
-    Vertex v3 = v1.skalarMult(0.8);
-    Vertex v4 = v1.add(v2);
+    iVertex v1 = new iVertex(42, 17);
+    iVertex v2 = new iVertex(0.3, 24.6);
+    iVertex v3 = v1.skalarMult(0.8);
+    iVertex v4 = v1.add(v2);
     GeometricObject o1 = new GeometricObject();
 
     System.out.println(v1);
